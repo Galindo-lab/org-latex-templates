@@ -1,0 +1,50 @@
+
+#+LANGUAGE:     es
+#+TITLE:        Hola mundo como estan
+#+AUTHOR:       Luis Eduardo Galindo Amaya (1274895)
+#+DATE:         2023 07 28
+#+OPTIONS:      toc:nil ^:nil title:nil
+#+latex_header: \usepackage{modern}
+
+\modentitlepage
+
+* Hola como estan kaskas
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
+hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
+nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis 
+natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
+turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
+accumsan nisl. \[\int x \,dx\] 
+
+
+#+begin_src elisp
+  (setq org-babel-python-command "python3"
+        org-plantuml-jar-path
+        (expand-file-name "~/.emacs.d/plantuml-1.2023.1.jar")
+        )
+
+  ;; (setq org-latex-pdf-process
+  ;;       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+  (setq org-latex-caption-above nil)
+
+  (use-package modus-themes
+    :config
+    (load-theme 'modus-operandi t)
+    ;; (load-theme 'modus-vivendi t)
+    )
+
+  (defun reverse-region (beg end)
+    "Reverse characters between BEG and END."
+    (interactive "r")
+    (let ((region (buffer-substring beg end)))
+      (delete-region beg end)
+      (insert (nreverse region))))
+
+
+#+end_src
+
+* 
+
+* 

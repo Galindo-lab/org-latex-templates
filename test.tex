@@ -1,0 +1,69 @@
+% Created 2023-07-29 sáb 00:53
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{modern}
+\author{Luis Eduardo Galindo Amaya (1274895)}
+\date{2023 07 28}
+\title{Hola mundo como estan}
+\hypersetup{
+ pdfauthor={Luis Eduardo Galindo Amaya (1274895)},
+ pdftitle={Hola mundo como estan},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={Spanish}}
+\begin{document}
+
+\modentitlepage
+
+\section{Hola como estan kaskas}
+\label{sec:org9f7a165}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
+hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
+nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis 
+natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
+turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
+accumsan nisl.
+
+
+\begin{verbatim}
+(setq org-babel-python-command "python3"
+      org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/plantuml-1.2023.1.jar")
+      )
+
+;; (setq org-latex-pdf-process
+;;       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+
+(setq org-latex-caption-above nil)
+
+(use-package modus-themes
+  :config
+  (load-theme 'modus-operandi t)
+  ;; (load-theme 'modus-vivendi t)
+  )
+
+(defun reverse-region (beg end)
+  "Reverse characters between BEG and END."
+  (interactive "r")
+  (let ((region (buffer-substring beg end)))
+    (delete-region beg end)
+    (insert (nreverse region))))
+
+
+\end{verbatim}
+\end{document}
