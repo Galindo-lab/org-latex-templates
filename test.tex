@@ -1,4 +1,4 @@
-% Created 2023-07-29 sáb 00:53
+% Created 2023-07-30 dom 12:25
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -15,12 +15,15 @@
 \usepackage{capt-of}
 \usepackage{hyperref}
 \usepackage{modern}
-\author{Luis Eduardo Galindo Amaya (1274895)}
-\date{2023 07 28}
-\title{Hola mundo como estan}
+\setcounter{secnumdepth}{2}
+\author{Luis Eduardo Galindo Amaya (1274895) \\
+Juan Fransisco Perez Valdez  (324342)}
+\date{29 de Junio 2023}
+\title{Identificación y manejo de material de laboratorio}
 \hypersetup{
- pdfauthor={Luis Eduardo Galindo Amaya (1274895)},
- pdftitle={Hola mundo como estan},
+ pdfauthor={Luis Eduardo Galindo Amaya (1274895) \\
+Juan Fransisco Perez Valdez  (324342)},
+ pdftitle={Identificación y manejo de material de laboratorio},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
@@ -29,41 +32,83 @@
 
 \modentitlepage
 
+\universitytitle
+\pugacurso
+\pugaactividad{Individual}
+\tableofcontents
+\pagebreak
+
+
+
+
 \section{Hola como estan kaskas}
-\label{sec:org9f7a165}
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
-hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
-nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis 
+\label{sec:org5437546}
+Cum sociis 
 natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
 turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
 accumsan nisl.
 
+\subsection{Test}
+\label{sec:org2d20ba6}
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
+hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
+nisl, tincidunt et, mattis eget, convallis nec, purus.  
 
 \begin{verbatim}
-(setq org-babel-python-command "python3"
-      org-plantuml-jar-path
-      (expand-file-name "~/.emacs.d/plantuml-1.2023.1.jar")
-      )
+import numpy as np
 
-;; (setq org-latex-pdf-process
-;;       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
 
-(setq org-latex-caption-above nil)
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
 
-(use-package modus-themes
-  :config
-  (load-theme 'modus-operandi t)
-  ;; (load-theme 'modus-vivendi t)
-  )
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
 
-(defun reverse-region (beg end)
-  "Reverse characters between BEG and END."
-  (interactive "r")
-  (let ((region (buffer-substring beg end)))
-    (delete-region beg end)
-    (insert (nreverse region))))
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
 
+                VT = np.zeros((n*m,1), int)
 
+    return M
 \end{verbatim}
+\captionof{figure}{Hola como esatn}
+
+\section{Hola}
+\label{sec:orgdc57771}
+Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
+Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
+commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
+Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
+
+\subsection{Nulla posuere.}
+\label{sec:orgca357ac}
+Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
+ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
+augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
+
+\subsection{Nam vestibulum accumsan nisl.}
+\label{sec:org6854469}
+dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
+libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
+
+\section{asdad}
+\label{sec:org0461123}
+mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
+facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
+dictum nunc justo sit amet elit.
 \end{document}

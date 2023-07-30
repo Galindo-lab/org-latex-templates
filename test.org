@@ -1,50 +1,87 @@
 
-#+LANGUAGE:     es
-#+TITLE:        Hola mundo como estan
-#+AUTHOR:       Luis Eduardo Galindo Amaya (1274895)
-#+DATE:         2023 07 28
-#+OPTIONS:      toc:nil ^:nil title:nil
+#+title:        Identificación y manejo de
+#+title:        material de laboratorio 
+#+AUTHOR:       Luis Eduardo Galindo Amaya (1274895) \\
+#+AUTHOR:       Juan Fransisco Perez Valdez  (324342)
+#+DATE:         29 de Junio 2023
+#+OPTIONS:      toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
 #+latex_header: \usepackage{modern}
 
+# portada
 \modentitlepage
 
+\universitytitle
+\pugacurso
+\pugaactividad{Individual}
+\tableofcontents
+\pagebreak
+
+
+
+
 * Hola como estan kaskas
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
-hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
-nisl, tincidunt et, mattis eget, convallis nec, purus.  Cum sociis 
+Cum sociis 
 natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
 turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
-accumsan nisl. \[\int x \,dx\] 
+accumsan nisl.
 
+** Test
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
+hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
+nisl, tincidunt et, mattis eget, convallis nec, purus.  
 
-#+begin_src elisp
-  (setq org-babel-python-command "python3"
-        org-plantuml-jar-path
-        (expand-file-name "~/.emacs.d/plantuml-1.2023.1.jar")
-        )
+#+caption: Hola como esatn
+#+begin_src python
+import numpy as np
+    
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+    
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1) 
 
-  ;; (setq org-latex-pdf-process
-  ;;       '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
-
-  (setq org-latex-caption-above nil)
-
-  (use-package modus-themes
-    :config
-    (load-theme 'modus-operandi t)
-    ;; (load-theme 'modus-vivendi t)
-    )
-
-  (defun reverse-region (beg end)
-    "Reverse characters between BEG and END."
-    (interactive "r")
-    (let ((region (buffer-substring beg end)))
-      (delete-region beg end)
-      (insert (nreverse region))))
-
-
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+                
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+                
+                VT = np.zeros((n*m,1), int)
+    
+    return M
 #+end_src
 
-* 
+* Hola 
+Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
+Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
+commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
+Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
-* 
+** Nulla posuere.  
+Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
+ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
+augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
+
+** Nam vestibulum accumsan nisl.  
+dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
+libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
+
+* asdad
+mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
+facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
+dictum nunc justo sit amet elit.
