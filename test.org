@@ -9,17 +9,36 @@
 #+LANGUAGE: es
 #+latex_header: \usepackage{modern}
 
-# portada
+# Informacion extra
+# -----------------
 \modentitlepage
+\pagebreak
 
-\universitytitle
-\pugacurso
-\pugaactividad{Individual}
 \tableofcontents
 \pagebreak
 
+\datasection{Individual}
+\pagebreak
 
+* Hola 
+Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
+Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
+commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
+Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
+** Nulla posuere.  
+Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
+ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
+augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
+
+** Nam vestibulum accumsan nisl.  
+dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
+libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
+
+* asdad
+mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
+facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
+dictum nunc justo sit amet elit.
 
 * Hola como estan kaskas
 Cum sociis 
@@ -66,22 +85,8 @@ def incmatrix(genl1,genl2):
     return M
 #+end_src
 
-* Hola 
-Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
-Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
-commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
-Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
-** Nulla posuere.  
-Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
-ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
-augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
+# Final del documento
+# -------------------
+\pagebreak
 
-** Nam vestibulum accumsan nisl.  
-dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
-libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
-
-* asdad
-mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
-facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
-dictum nunc justo sit amet elit.

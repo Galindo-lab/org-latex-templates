@@ -91,11 +91,20 @@
 \newcommand{\group}{13134}
 \newcommand{\period}{2022-1}
 \newcommand{\docente}{Manuel Castañon Puga}
-\newcommand{\logo}{images/escudo-uabc-2022-1-tinta-pos.png}
 
 % ----------------------------------------------------------------------
 %                             Metodos 
 % ----------------------------------------------------------------------
+
+
+
+\newcommand{\datasection}[1]{
+  \universitytitle
+  \pugacurso
+  \vspace{12.5pt}
+  \pugaactividad{#1}
+}
+
 
 \newcommand{\universitytitle}{
     \begin{center}
@@ -144,9 +153,9 @@
     \end{center}
 }
 
-\newcommand{\modentitlepage}{
+\newcommand{\modentitlepage}[1]{
     \begin{titlepage} 
-        \thispagestyle{empty}
+        %% \thispagestyle{empty}
         \newgeometry{margin=0.5in}
         \noindent
 
@@ -154,7 +163,7 @@
         % -----------
         \noindent\begin{minipage}{0.2\textwidth}
             % escudo de la universidad
-            \includegraphics[width=2.5cm]{\logo} 
+            \includegraphics[width=2.5cm]{#1} 
         \end{minipage}%
         \hfill%
         \begin{minipage}{0.8\textwidth} %\raggedleft
@@ -207,31 +216,3 @@
     \end{titlepage}
 }
 
-
-\newenvironment{Frame}[1][]{%
-    \begin{mdframed}[%
-        frametitle={#1},
-        skipabove=\baselineskip plus 2pt minus 1pt,
-        skipbelow=\baselineskip plus 2pt minus 1pt,
-        linewidth=0.5pt,
-        frametitlerule=true,
-        %% frametitlebackgroundcolor=\color{lightgray}
-    ]%
-}{%
-    \end{mdframed}
-}
-
-\newcommand{\test}{
-  \begin{mdframed}[
-      frametitle= \begin{center} INFORMACIÓN DE LA MATERIA \end{center},
-      skipabove=\baselineskip plus 2pt minus 1pt,
-      skipbelow=\baselineskip plus 2pt minus 1pt,
-      linewidth=0.5pt,
-      frametitlerule=true,
-      frametitlebackgroundcolor=gray!30
-    ]
-    Nombre de la materia y clave: Herramientas de Desarrollo de Software (40017). \\
-    Grupo y periodo: 341 (2022-2) \\
-    Profesor: Manuel Castañón Puga. 
-  \end{mdframed}
-}
