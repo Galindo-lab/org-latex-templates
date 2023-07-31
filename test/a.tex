@@ -1,4 +1,4 @@
-% Created 2023-07-30 dom 13:31
+% Created 2023-07-30 dom 16:48
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,7 +14,8 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\usepackage{modern}
+\usepackage{../modern}
+\addbibresource{../sample.bib}
 \setcounter{secnumdepth}{2}
 \author{Luis Eduardo Galindo Amaya (1274895) \\
 Juan Fransisco Perez Valdez  (324342)}
@@ -30,39 +31,40 @@ Juan Fransisco Perez Valdez  (324342)},
  pdflang={Spanish}}
 \begin{document}
 
-\modentitlepage
-\pagebreak
-\tableofcontents
-\pagebreak
+\modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
 \datasection{Individual}
+\tableofcontents
 \pagebreak
 
 \section{Hola}
-\label{sec:orgbd5cfde}
+\label{sec:org8b9ef89}
 Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
 Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
 commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
 Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
 \subsection{Nulla posuere.}
-\label{sec:orgb2b908b}
+\label{sec:org43ae633}
 Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
 ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
 augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
 
+Using \texttt{biblatex} you can display a bibliography divided into sections, 
+depending on citation type. Let's cite! Einstein's journal paper \cite{einstein} 
+
 \subsection{Nam vestibulum accumsan nisl.}
-\label{sec:orgb4ce9b0}
+\label{sec:orgb10d104}
 dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
 libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
 
 \section{asdad}
-\label{sec:org189ac81}
+\label{sec:orga9ea27c}
 mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
 facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
 dictum nunc justo sit amet elit.
 
 \section{Hola como estan kaskas}
-\label{sec:org1a26ca5}
+\label{sec:orgafe1c3d}
 Cum sociis 
 natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
@@ -70,7 +72,7 @@ turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
 accumsan nisl.
 
 \subsection{Test}
-\label{sec:org7886534}
+\label{sec:org4c26d37}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
 hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
 nisl, tincidunt et, mattis eget, convallis nec, purus.  
@@ -109,5 +111,6 @@ def incmatrix(genl1,genl2):
 \captionof{figure}{Hola como esatn}
 
 
-\pagebreak
+
+\printbibliography
 \end{document}
