@@ -1,4 +1,4 @@
-% Created 2023-07-30 dom 16:48
+% Created 2023-07-31 lun 19:03
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,6 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\bibliographystyle{ieee}
 \usepackage{../modern}
 \addbibresource{../sample.bib}
 \setcounter{secnumdepth}{2}
@@ -32,47 +33,55 @@ Juan Fransisco Perez Valdez  (324342)},
 \begin{document}
 
 \modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
-\datasection{Individual}
 \tableofcontents
 \pagebreak
+\datasection{Individual}
 
 \section{Hola}
-\label{sec:org8b9ef89}
+\label{sec:orgb4a4ffa}
 Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
 Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
 commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
 Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
-\subsection{Nulla posuere.}
-\label{sec:org43ae633}
+\subsection{Nulla posuere}
+\label{sec:org28ef1e9}
 Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
 ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
 augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
 
-Using \texttt{biblatex} you can display a bibliography divided into sections, 
-depending on citation type. Let's cite! Einstein's journal paper \cite{einstein} 
+\lstinputlisting{code/test.el}
 
-\subsection{Nam vestibulum accumsan nisl.}
-\label{sec:orgb10d104}
+Using \texttt{biblatex} you can display a bibliography divided into sections, 
+depending on citation type. Let's cite! Einstein's journal paper 
+
+\subsection{Nam vestibulum accumsan nisl}
+\label{sec:org503026d}
 dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
 libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
 
 \section{asdad}
-\label{sec:orga9ea27c}
+\label{sec:org5286396}
 mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
 facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
-dictum nunc justo sit amet elit.
+dictum nunc justo sit amet elit \cite{einstein}. 
 
 \section{Hola como estan kaskas}
-\label{sec:orgafe1c3d}
+\label{sec:org9da28ff}
 Cum sociis 
 natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
 turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
 accumsan nisl.
 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=8cm]{images/2019-11-30-Marienallee_Dahlem-7978.jpg}
+\caption{Marienallee in Dahlem, Euskirchen district}
+\end{figure}
+
 \subsection{Test}
-\label{sec:org4c26d37}
+\label{sec:org7e9d598}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
 hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
 nisl, tincidunt et, mattis eget, convallis nec, purus.  
@@ -110,7 +119,7 @@ def incmatrix(genl1,genl2):
 \end{verbatim}
 \captionof{figure}{Hola como esatn}
 
-
-
-\printbibliography
+\section{Referencias}
+\label{sec:orga23ac63}
+\printbibliography[heading=none]
 \end{document}

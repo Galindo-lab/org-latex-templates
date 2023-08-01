@@ -31,7 +31,6 @@
 \usepackage[framemethod=TikZ]{mdframed}
 
 \usepackage{biblatex}
-\bibliographystyle{ieeetran}
 
 
 
@@ -81,6 +80,7 @@
 %cambiar el tamaño a helvetica
 \renewcommand\familydefault{\sfdefault} 
 
+%% sangria
 \setlength{\parindent}{0pt}
 
 
@@ -105,8 +105,11 @@
 \newcommand{\datasection}[1]{
   \universitytitle
   \pugacurso
-  \vspace{12.5pt}
+  %% \vspace{12.5pt}
   \pugaactividad{#1}
+  \begin{center}
+    {\large\bfseries Reporte de actividades}
+  \end{center}
 }
 
 
@@ -122,40 +125,62 @@
     \end{center}
 }
 
-
 \newcommand{\pugacurso}{
-    \begin{center}
-        \renewcommand{\arraystretch}{1.75}
-        \begin{tabularx}{\textwidth}{|p{1.5in}|X|}
-        \hline
-        \multicolumn{2}{|c|}{ INFORMACIÓN DEL CURSO} \\
-        \hline
-        \multicolumn{2}{|c|}{\makecell{ \\ \large{\subject} \\ ~ }}\\
-        \hline
-        Grupo y periodo & \group ~ (\period) \\
-        \hline
-        Profesor & \docente \\
-        \hline
-        \end{tabularx}
-    \end{center}
+  \begin{center}
+    {\large\bfseries Información de la materia}
+    \begin{mdframed}
+      \textbf{Nombre de la materia y clave}: \subject \\
+      \textbf{Grupo y periodo}: \group ~ (\period) \\
+      \textbf{Profesor}: \docente.
+    \end{mdframed}
+  \end{center}
 }
 
 \newcommand{\pugaactividad}[1]{
-    \begin{center}
-        \renewcommand{\arraystretch}{1.75}
-        \begin{tabularx}{\textwidth}{|p{1.5in}|X|}
-        \hline
-        \multicolumn{2}{|c|}{INFORMACIÓN DE LA ACTIVIDAD} \\
-        \hline
-        \multicolumn{2}{|c|}{\makecell{ \\ \large{\@title} \\ ~ }}\\
-        \hline
-        Lugar y fecha & \@date \\
-        \hline
-        Carácter de la actividad & #1 \\
-        \hline
-        \end{tabularx}
-    \end{center}
+  \begin{center}
+    {\large\bfseries Información de la actividad}
+    \begin{mdframed}
+      \textbf{Nombre de la actividad}: \@title \\  
+      \textbf{Lugar y fecha}: \@date \\
+      \textbf{Carácter de la actividad}: #1.
+      %% \\ \textbf{Participante(es)}: \@author
+    \end{mdframed}
+  \end{center}
 }
+
+%% \newcommand{\pugacurso}{
+%%     \begin{center}
+%%         \renewcommand{\arraystretch}{1.75}
+%%         \begin{tabularx}{\textwidth}{|p{1.5in}|X|}
+%%         \hline
+%%         \multicolumn{2}{|c|}{ INFORMACIÓN DEL CURSO} \\
+%%         \hline
+%%         \multicolumn{2}{|c|}{\makecell{ \\ \large{\subject} \\ ~ }}\\
+%%         \hline
+%%         Grupo y periodo & \group ~ (\period) \\
+%%         \hline
+%%         Profesor & \docente \\
+%%         \hline
+%%         \end{tabularx}
+%%     \end{center}
+%% }
+
+%% \newcommand{\pugaactividad}[1]{
+%%     \begin{center}
+%%         \renewcommand{\arraystretch}{1.75}
+%%         \begin{tabularx}{\textwidth}{|p{1.5in}|X|}
+%%         \hline
+%%         \multicolumn{2}{|c|}{INFORMACIÓN DE LA ACTIVIDAD} \\
+%%         \hline
+%%         \multicolumn{2}{|c|}{\makecell{ \\ \large{\@title} \\ ~ }}\\
+%%         \hline
+%%         Lugar y fecha & \@date \\
+%%         \hline
+%%         Carácter de la actividad & #1 \\
+%%         \hline
+%%         \end{tabularx}
+%%     \end{center}
+%% }
 
 \newcommand{\modentitlepage}[1]{
     \begin{titlepage} 

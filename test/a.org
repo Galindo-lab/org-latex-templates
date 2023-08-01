@@ -7,38 +7,47 @@
 #+OPTIONS:      toc:nil ^:nil title:nil num:2
 
 #+LANGUAGE: es
+#+latex_header: \bibliographystyle{ieee}
 #+latex_header: \usepackage{../modern}
 #+latex_header: \addbibresource{../sample.bib} 
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
 
 # Informacion extra
 # -----------------
 \modentitlepage{../images/escudo-uabc-2022-1-tinta-pos.png}
-\datasection{Individual}
 \tableofcontents
 \pagebreak
+\datasection{Individual}
 
-* Hola 
+* Hola
 Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
 Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
 commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
 Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
-** Nulla posuere.  
+** Nulla posuere
 Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
 ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
 augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
 
-Using \texttt{biblatex} you can display a bibliography divided into sections, 
-depending on citation type. Let's cite! Einstein's journal paper \cite{einstein} 
+# listar codifgo de un archivo externo
+{{{code(code/test.el)}}}
 
-** Nam vestibulum accumsan nisl.  
+Using \texttt{biblatex} you can display a bibliography divided into sections, 
+depending on citation type. Let's cite! Einstein's journal paper 
+
+** Nam vestibulum accumsan nisl
 dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
 libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
 
 * asdad
 mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
 facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
-dictum nunc justo sit amet elit.
+dictum nunc justo sit amet elit {{{cite(einstein)}}}. 
 
 * Hola como estan kaskas
 Cum sociis 
@@ -46,6 +55,10 @@ natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
 turpis.  Cras placerat accumsan nulla.  Nullam rutrum.  Nam vestibulum
 accumsan nisl.
+
+#+attr_latex: :width 8cm
+#+caption: Marienallee in Dahlem, Euskirchen district
+[[file:images/2019-11-30-Marienallee_Dahlem-7978.jpg]]
 
 ** Test
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
@@ -85,6 +98,5 @@ def incmatrix(genl1,genl2):
     return M
 #+end_src
 
-
-
-\printbibliography
+* Referencias 
+\printbibliography[heading=none]
