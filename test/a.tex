@@ -1,4 +1,4 @@
-% Created 2023-07-31 lun 19:03
+% Created 2023-08-09 mié 19:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,9 +14,8 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\bibliographystyle{ieee}
 \usepackage{../modern}
-\addbibresource{../sample.bib}
+\bibliography{../sample.bib}
 \setcounter{secnumdepth}{2}
 \author{Luis Eduardo Galindo Amaya (1274895) \\
 Juan Fransisco Perez Valdez  (324342)}
@@ -38,36 +37,40 @@ Juan Fransisco Perez Valdez  (324342)},
 \datasection{Individual}
 
 \section{Hola}
-\label{sec:orgb4a4ffa}
+\label{sec:org341a8b7}
 Nam euismod tellus id erat.  Pellentesque dapibus suscipit ligula.  
 Donec posuere augue in quam.  Etiam vel tortor sodales tellus ultricies
 commodo.  Suspendisse potenti.  Aenean in sem ac leo mollis blandit.  
 Donec neque quam, dignissim in, mollis nec, sagittis eu, wisi.  
 
-\subsection{Nulla posuere}
-\label{sec:org28ef1e9}
-Phasellus lacus.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
+\subsection{Ejemplos de codigo desde archivos externos}
+\label{sec:org1c38b7c}
+\texttt{Phasellus lacus}.  Etiam laoreet quam sed arcu.  Phasellus at dui in 
 ligula mollis ultricies.  Integer placerat tristique nisl.  Praesent 
 augue.  Fusce commodo.  Vestibulum convallis, lorem a tempus semper, 
 
 \lstinputlisting{code/test.el}
 
+\lstinputlisting{code/main.c}
+
+\lstinputlisting{code/makefile}
+
 Using \texttt{biblatex} you can display a bibliography divided into sections, 
 depending on citation type. Let's cite! Einstein's journal paper 
 
 \subsection{Nam vestibulum accumsan nisl}
-\label{sec:org503026d}
+\label{sec:orga311874}
 dui dui euismod elit, vitae placerat urna tortor vitae lacus.  Nullam 
 libero mauris, consequat quis, varius et, dictum id, arcu.  Mauris 
 
 \section{asdad}
-\label{sec:org5286396}
+\label{sec:org07149ba}
 mollis tincidunt felis.  Aliquam feugiat tellus ut neque.  Nulla 
 facilisis, risus a rhoncus fermentum, tellus tellus lacinia purus, et 
 dictum nunc justo sit amet elit \cite{einstein}. 
 
 \section{Hola como estan kaskas}
-\label{sec:org9da28ff}
+\label{sec:orgf85b8e9}
 Cum sociis 
 natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
 mus.  Nulla posuere.  Donec vitae dolor.  Nullam tristique diam non 
@@ -81,7 +84,7 @@ accumsan nisl.
 \end{figure}
 
 \subsection{Test}
-\label{sec:org7e9d598}
+\label{sec:org0f37d7f}
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec 
 hendrerit tempor tellus.  Donec pretium posuere tellus.  Proin quam 
 nisl, tincidunt et, mattis eget, convallis nec, purus.  
@@ -119,7 +122,26 @@ def incmatrix(genl1,genl2):
 \end{verbatim}
 \captionof{figure}{Hola como esatn}
 
+\section{Test Table}
+\label{sec:org561e674}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+Hola & Como & Estan en este dia\\
+\hline
+Aliquam posuere. & jk dsadsa & jk eweweq\\
+j wqeqwe & k eweqw & jkjkj\\
+ &  & \\
+ &  & \\
+\hline
+\end{tabular}
+\caption{HOla}
+
+\end{table}
+
 \section{Referencias}
-\label{sec:orga23ac63}
+\label{sec:org4fc01c5}
 \printbibliography[heading=none]
 \end{document}

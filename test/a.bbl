@@ -18,14 +18,15 @@
 
 
 \refsection{0}
-  \datalist[entry]{nty/global//global/global}
+  \datalist[entry]{apa/global//global/global}
     \entry{einstein}{article}{}
       \name{author}{1}{}{%
-        {{hash=3ebf53e52a3ce84f0ffb8553200a6a63}{%
+        {{un=0,uniquepart=base,hash=3ebf53e52a3ce84f0ffb8553200a6a63}{%
            family={Einstein},
            familyi={E\bibinitperiod},
            given={Albert},
-           giveni={A\bibinitperiod}}}%
+           giveni={A\bibinitperiod},
+           givenun=0}}%
       }
       \strng{namehash}{3ebf53e52a3ce84f0ffb8553200a6a63}
       \strng{fullhash}{3ebf53e52a3ce84f0ffb8553200a6a63}
@@ -35,6 +36,9 @@
       \strng{authorfullhash}{3ebf53e52a3ce84f0ffb8553200a6a63}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Annalen der Physik}
