@@ -103,7 +103,7 @@ def incmatrix(genl1,genl2):
 
 * Test Table
 
-#+caption: HOla
+#+caption: Hola
 |---+------------------+-----------+-------------------|
 |   | Hola             | Como      | Estan en este dia |
 | / | <>               | <>        | <>                |
