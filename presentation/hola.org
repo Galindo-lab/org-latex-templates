@@ -1,0 +1,145 @@
+
+#+title:        Identificación y manejo de \\
+#+title:        material de laboratorio 
+#+AUTHOR:       Luis Eduardo Galindo Amaya (1274895) \\
+#+AUTHOR:       Juan Fransisco Perez Valdez  (324342)
+#+DATE:         29 de Junio 2023
+#+OPTIONS:      toc:nil ^:nil num:2
+
+# title:nil
+
+#+STARTUP: hideblocks
+#+LANGUAGE: es
+
+#+latex_header: \usepackage{../modernpres}
+#+latex_header: \bibliography{../sample.bib}
+
+#+latex_class_options: [9pt]
+
+
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+
+* hola como estas
+#+begin_src plantuml :file ./a.png
+!theme plain
+scale 5
+skinparam classattributeiconsize 0
+
+@startuml
+!theme plain
+left to right direction
+
+class User {
+    id: Integer
+    username: String
+    ...
+}
+
+class Profile  {
+    user: User
+}
+
+class Group {
+    name: String
+    admin: User
+}
+
+class Member  {
+    member: User
+    group: Group
+}
+
+enum Roles  {
+    RESOURCE_INVESTIGATOR
+    TEAM_WORKER
+    COORDINATOR
+    PLANT
+    MONITOR_EVALUATOR
+    SPECIALIST
+    SHAPER
+    IMPLEMENTER
+    COMPLETER_FINISHER
+}
+
+class BelbinProfile  {
+    resource_investigator: Integer
+    team_worker: Integer
+    coordinator: Integer
+    plant: Integer
+    monitor_evaluator: Integer
+    specialist: Integer
+    shaper: Integer
+    implementer: Integer
+    completer_finisher: Integer
+    + primary_roles(): List<String>
+}
+
+class ProfileForm {
+   member: Member
+   timestamp: DateTimeField
+   
+}
+
+BelbinProfile <|-- ProfileForm
+
+Group "*" -- Member : has
+User "*" -- Profile : has
+User "*" -- Group : administers
+User "*" -- Member : is 
+
+Member "*" -- ProfileForm
+
+BelbinProfile +-- Roles : contains
+@enduml
+
+#+end_src
+
+#+caption: hola como estan en este dia de la vida ({{{cite(einstein)}}}).
+#+RESULTS:
+[[file:./a.png]]
+
+* Pie de pagina
+Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel
+tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem 
+ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu [fn:Hola] ,
+
+[fn:Hola] Etiam vel tortor sodales tellus ultricies commodo
+
+
+* Listas
+** Hola  
++ Como estan
+  - en este dia
+  - de la lvida 
+
+* codigo
+#+caption: Esta es una prueba
+#+begin_src haskell
+import Yesod
+
+data WebApp = WebApp Yesod WebApp
+
+mkYesod "WebApp" [parseRoutes|
+  / HomeR GET
+|]
+
+getHomeR = defaultLayout [whamlet|
+  <div>Hello, world!
+|]
+
+main = warpEnv WebApp
+
+#+end_src
+
+* Tablas 
+\[ \iint x^2 + y^2 - 1 \,dx \,dy \]
+|   | Test 1 | Test 2 |
+| / | <>     | <>     |
+|   | Hola   | esta es una pruba |
+
+* Referencias
+\printbibliography[heading=none]
