@@ -2,7 +2,7 @@
 \documentclass[10pt]{beamer}
 \usepackage[spanish, mexico]{babel}
 
-
+\usepackage{svg}
 \usepackage[scaled]{helvet}
 
 \usepackage[backend=biber, style=apa]{biblatex}
@@ -17,19 +17,40 @@
 \usecolortheme{dove}
 
 \setbeamerfont{title}{series=\bfseries}
-\setbeamerfont{frametitle}{series=\bfseries,size=\small}
 
+%% \setbeamerfont{frametitle}{series=\bfseries,size=\small}
+%% \setbeamerfont{frametitle}{size=\tiny}
 
-\definecolor{myblue}{RGB}{33,157,84}
-\setbeamercolor*{structure}{bg=myblue!20,fg=myblue}
-\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
-\setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
-\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
-\setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamerfont{frametitle}{series=\bfseries,size=\tiny}
+
+\setbeamercolor{block title alerted}{bg=red!20}
+
+%% \definecolor{myblue}{RGB}{33,157,84}
+%% \setbeamercolor*{structure}{bg=myblue!20,fg=myblue}
+%% \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+%% \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
+%% \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=black}
+%% \setbeamercolor*{palette quaternary}{fg=white,bg=black}
+
+\setbeamerfont{block title}{series=\bfseries,size=\normalsize}
+\setbeamercolor{block title}{bg=none,fg=black}
 
 %% hide simbols
 \setbeamertemplate{bibliography item}{}
 \setbeamertemplate{headline}{}
+
+\usepackage{xpatch}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {%
+    \addtolength{\itemsep}{2ex}%
+    \def\makelabel%
+  }
+  {}
+  {}
+
+\BeforeBeginEnvironment{itemize}{\vskip 2ex}
 
 
 
@@ -65,7 +86,7 @@
    basicstyle=\ttfamily\small,
    numbers=left,
    showspaces=false,
-   frame=single,
+   frame=simple,
    showstringspaces=false, 
    showtabs=false, 
    numberstyle=\tiny,
@@ -99,6 +120,10 @@
 {}{}
 
 
+
+
+
+
 % cambiar el tamaño de la tipografia
 \setlength{\headheight}{12.5pt}
 
@@ -107,3 +132,40 @@
 
 %% sangria
 \setlength{\parindent}{0pt}
+
+
+\newenvironment{onec}
+               {
+                 \begin{minipage}{0.18\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+
+\newenvironment{twoc}
+               {
+                 \begin{minipage}{0.39\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+
+\newenvironment{threec}
+               {
+                 \begin{minipage}{0.58\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }

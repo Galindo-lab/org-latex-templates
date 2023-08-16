@@ -7,15 +7,12 @@
 #+OPTIONS:      toc:nil ^:nil num:2
 
 # title:nil
-
 #+STARTUP: hideblocks
 #+LANGUAGE: es
 
 #+latex_header: \usepackage{../modernpres}
 #+latex_header: \bibliography{../sample.bib}
-
-#+latex_class_options: [9pt]
-
+#+latex_class_options: [aspectratio=169, 9pt]
 
 
 # code macros
@@ -23,15 +20,15 @@
 #+macro: code @@latex:\lstinputlisting{$1}@@
 #+macro: cite @@latex:\cite{$1}@@
 
-* hola como estas
-#+begin_src plantuml :file ./a.png
-!theme plain
-scale 5
-skinparam classattributeiconsize 0
+#+macro: testBold *$1* \\
 
-@startuml
+* Hola como estas
+#+begin_src plantuml :file ./images/dmulti.png
 !theme plain
+scale 2
+skinparam classattributeiconsize 0
 left to right direction
+
 
 class User {
     id: Integer
@@ -94,29 +91,27 @@ User "*" -- Member : is
 Member "*" -- ProfileForm
 
 BelbinProfile +-- Roles : contains
-@enduml
-
 #+end_src
 
 #+caption: hola como estan en este dia de la vida ({{{cite(einstein)}}}).
 #+RESULTS:
-[[file:./a.png]]
+[[file:./images/dmulti.png]]
 
-* Pie de pagina
+* Pie de pagina y listas
+** Hola como estan
 Pellentesque dapibus suscipit ligula.  Donec posuere augue in quam.  Etiam vel
 tortor sodales tellus ultricies commodo.  Suspendisse potenti.  Aenean in sem 
-ac leo mollis blandit.  Donec neque quam, dignissim in, mollis nec, sagittis eu [fn:Hola] ,
+ac leo mollis blandit.  Donec neque quam, dignissim in, mollis [fn:asd]
+nec, sagittis eu [fn:Hola]. 
 
++ Como estan
+  1. en este dia
+  2. de la lvida 
+
+[fn:asd] {{{cite(russell)}}}
 [fn:Hola] Etiam vel tortor sodales tellus ultricies commodo
 
-
-* Listas
-** Hola  
-+ Como estan
-  - en este dia
-  - de la lvida 
-
-* codigo
+* Código
 #+caption: Esta es una prueba
 #+begin_src haskell
 import Yesod
@@ -133,13 +128,89 @@ getHomeR = defaultLayout [whamlet|
 
 main = warpEnv WebApp
 
+mkYesod "WebApp" [parseRoutes|
+  / HomeR GET
+|]
+
+yay
+veinte parece el limite
 #+end_src
 
-* Tablas 
+* Tablas
 \[ \iint x^2 + y^2 - 1 \,dx \,dy \]
 |   | Test 1 | Test 2 |
 | / | <>     | <>     |
 |   | Hola   | esta es una pruba |
 
+* Media pagina vertical
+Proin quam nisl, tincidunt et, mattis eget, convallis nec, purus[fn:mpv].
+In id erat non orci commodo lobortis.  Phasellus purus. 
+
+#+ATTR_HTML:
+#+ATTR_LATEX: :width 200px
+#+CAPTION: Este es un test de una imagen
+[[file:images/2019-11-30-Marienallee_Dahlem-7978.jpg]]
+
+[fn:mpv] Hola este es un test de footnote
+
+* Media pagina horizontal
+#+begin_twoc
+*Hack de subtitulos* \\
+The plot with teal color corresponds to the function $y=(x^3-1)^2$ and the plot
+with red color corresponds to the function $y=(x^{11}-1)^2$   
+#+end_twoc
+#+begin_threec
+#+caption: hola como estan
+[[file:images/2019-11-30-Marienallee_Dahlem-7978.jpg]]
+#+end_threec
+
+* Código mediapagina
+#+begin_threec
+#+begin_src 
+import Yesod
+
+data WebApp = WebApp Yesod WebApp
+
+mkYesod "WebApp" [parseRoutes|
+  / HomeR GET
+|]
+
+getHomeR = defaultLayout [whamlet|
+  <div>Hello, world!
+|]
+
+main = warpEnv WebApp
+
+mkYesod "WebApp" [parseRoutes|
+  / HomeR GET
+|]
+
+yay
+veinte parece el limite
+dfsfd
+fdsfsd
+fdsfds
+fdsfd
+#+end_src
+#+end_threec
+#+begin_twoc
+{{{testBold(Otro Hack)}}}
+The plot with teal color corresponds to the function $y=(x^3-1)^2$ and the plot
+with red color corresponds to the function $y=(x^{11}-1)^2$
+#+end_twoc
+
+* Test de sección
+#+begin_quote
+Aliquam erat volutpat.  Nunc eleifend leo vitae magna.  In id erat non orci
+commodo lobortis.  Proin neque massa, cursus ut, gravida ut, lobortis eget, 
+lacus.  Sed diam.  Praesent fermentum tempor tellus.  Nullam tempus.  Mauris 
+erat.
+#+end_quote
+
+\begin{alertblock}{Conclusio    n}
+Simmons Hall $\not=$ Simmons Dormitory.
+\end{alertblock}
+
 * Referencias
 \printbibliography[heading=none]
+# \vspace{\fill}

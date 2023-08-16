@@ -114,5 +114,5 @@ def incmatrix(genl1,genl2):
 |   |                  |           |                   |
 |---+------------------+-----------+-------------------|
 
-* Referencias 
+* Referencias
 \printbibliography[heading=none]
