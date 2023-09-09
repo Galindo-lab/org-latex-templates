@@ -4,6 +4,7 @@
 
 \usepackage{svg}
 \usepackage[scaled]{helvet}
+\usepackage{tikz}
 
 \usepackage[backend=biber, style=apa]{biblatex}
 
@@ -132,6 +133,15 @@
 
 %% sangria
 \setlength{\parindent}{0pt}
+
+
+\titlegraphic { 
+  \begin{tikzpicture}[overlay,remember picture]
+    \node[right=0.5cm] at (current page.162){
+      \includegraphics[width=2cm]{../images/escudo-uabc-2022-color-cont.png}
+    };
+  \end{tikzpicture}
+}
 
 
 \newenvironment{onec}

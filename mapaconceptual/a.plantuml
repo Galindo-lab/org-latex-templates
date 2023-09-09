@@ -1,0 +1,36 @@
+@startmindmap
+!theme plain
+scale 5
+skinparam classattributeiconsize 0
+
+title Tecnologías Emergentes \n con aplicaciones
+
++ Tecnologías emergentes
+++ Inteligencia Artificial
++++ Aplicaciones que realizan tareas complejas para las que antes eran necesaria la intervención humana
+/' https://www.oracle.com/mx/artificial-intelligence/what-is-ai/ '/
+++++ Diagnóstico médico asistido por IA.
+++ Redes 5G
++++ Es la quinta generación de tecnología celular. Está diseñada para aumentar la velocidad, reducir la latencia y mejorar la flexibilidad de los servicios inalámbricos.
+++++  Streaming de vídeo en alta definición en dispositivos móviles
+/' https://www.cisco.com/c/es_mx/solutions/what-is-5g.html '/
+++ Internet de las Cosas
++++ Describe la red de objetos físicos que llevan incorporados sensores, software y otras tecnologías con el fin de conectarse e intercambiar datos con otros dispositivos y sistemas a través de Internet.
+++++ Monitoreo de la calidad del aire en ciudades.
+/' https://www.oracle.com/mx/internet-of-things/what-is-iot/ '/
+++ Vehículos autónomos
++++ Son vehículos que utilizan sensores, cámaras y software avanzado para operar sin intervención humana.
+++++ Taxis y camiones autónomos
+/' https://www.kia.com/mx/discover-kia/ask/Are-self-driving-cars-the-future.html '/
+++ AR y VR
++++ Combina elementos virtuales con el entorno real, mientras que VR sumerge al usuario en un mundo completamente virtual, ambos tienen aplicaciones en entretenimiento, educación y capacitación
+++++ Entrenamiento virtual para cirujanos
+++ Energías renovables
++++ La tecnología solar y eólica está evolucionando rápidamente, al igual que las soluciones para almacenar la energía generada de manera eficiente.
+++++ Almacenamiento de energía solar a gran escala
+++ Robótica
++++ Técnica que se utiliza en el diseño y la construcción de robots y aparatos que realizan operaciones o trabajos, generalmente en instalaciones industriales y en sustitución de la mano de obra humana.
+++++ Ensamblaje de productos en líneas de producción
+/' https://es.wikipedia.org/wiki/Rob%C3%B3tica '/
+@endmindmapn
+

@@ -1,0 +1,79 @@
+
+#+title:        Mapa conceptual tecnologías emergentes
+#+AUTHOR:       Luis Eduardo Galindo Amaya
+#+DATE:         2023-08-14
+#+OPTIONS:      toc:nil ^:nil title:nil num:2
+
+#+LANGUAGE: es
+#+latex_header: \usepackage{../modern}
+# #+latex_header: \bibliography{../sample.bib}
+
+# code macros
+# ----------------
+#+macro: code @@latex:\lstinputlisting{$1}@@
+#+macro: cite @@latex:\cite{$1}@@
+
+# Informacion extra
+# -----------------
+
+#+begin_export latex
+
+\newenvironment{onec}
+               {
+                 \begin{minipage}{0.18\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+
+\newenvironment{twoc}
+               {
+                 \begin{minipage}{0.39\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+
+\newenvironment{threec}
+               {
+                 \begin{minipage}{0.58\textwidth}
+                   \raggedright
+
+                   \\
+               }
+               { 
+                 \\\\
+                 \end{minipage}
+               }
+#+end_export
+
+#+begin_twoc
+*Tema*: \\
+{{{title}}}
+#+end_twoc
+#+begin_threec
+*Nombre*: {{{author}}} \\
+*Matricula*: 1274895 \\
+*Fecha*: {{{date}}} 
+#+end_threec
+\\
+-----
+\vspace{\fill}
+[[file:images/a.png]]
+\vspace{\fill}
+
+Fuentes:
+- https://www.oracle.com/mx/artificial-intelligence/what-is-ai/ 
+- https://www.cisco.com/c/es_mx/solutions/what-is-5g.html
+- https://www.oracle.com/mx/internet-of-things/what-is-iot/
+- https://www.kia.com/mx/discover-kika/ask/Are-self-driving-cars-the-future.html
+- https://es.wikipedia.org/wiki/Rob%C3%B3tica
+

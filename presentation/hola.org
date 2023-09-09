@@ -4,9 +4,8 @@
 #+AUTHOR:       Luis Eduardo Galindo Amaya (1274895) \\
 #+AUTHOR:       Juan Fransisco Perez Valdez  (324342)
 #+DATE:         29 de Junio 2023
-#+OPTIONS:      toc:nil ^:nil num:2
+#+OPTIONS:      toc:nil ^:nil num:2 title:t
 
-# title:nil
 #+STARTUP: hideblocks
 #+LANGUAGE: es
 
@@ -212,5 +211,4 @@ Simmons Hall $\not=$ Simmons Dormitory.
 \end{alertblock}
 
 * Referencias
-\printbibliography[heading=none]
-# \vspace{\fill}
+\printbibliography
